@@ -6,9 +6,9 @@ import Preview from './Preview';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Router>
-      <div className="app__bodu">
+      <div className="app__body">
        <Switch>
           <Route path="/preview">
             <Preview />
