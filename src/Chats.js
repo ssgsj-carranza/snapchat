@@ -14,6 +14,9 @@ function Chats() {
                     <input placeholder='Friends' type="text" />
                 </div>
                 <ChatBubbleIcon className="chats__chatIcon"/>
+            </div>
+            <div className="chats__posts">
+                
             </div>            
         </div>
     )
