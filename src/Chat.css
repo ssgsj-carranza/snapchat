@@ -7,9 +7,14 @@
     cursor: pointer;
 }
 
+.chat:hover {
+    opacity: 0.8;
+}
+
 .chat__avatar {
     height: 35px !important;
     width: 35px !important;
+    margin-left: 5px;
 }
 
 .chat__readIcon {
