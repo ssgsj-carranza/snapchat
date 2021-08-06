@@ -30,14 +30,14 @@ function Chats() {
                 {posts.map(
                     ({
                         id, 
-                        data:{profilePic, username, timestamp, imageUrl, read},
+                        data:{profilePic, username, timestamp, image, read},
                     }) => (
                     <Chat 
                         key={id}
                         id={id}
                         username={username}
                         timestamp={timestamp}
-                        imageUrl={imageUrl}
+                        image={image}
                         read={read}
                         profilePic={profilePic}
                     />

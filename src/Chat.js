@@ -8,13 +8,13 @@ import { selectImage } from './features/appSlice';
 import { db } from './firebase';
 import {useHistory} from 'react-router-dom';
 
-function Chat({id, username, timestamp,read, imageUrl, profilePic}) {
+function Chat({id, username, timestamp,read, image, profilePic}) {
     const dispatch = useDispatch();
     const history = useHistory();
     
     const open = () => {
         if(!read) {
-            dispatch(selectImage(imageUrl));
+            dispatch(selectImage(image));
             db.collection('posts').doc(id).set({
                 read: true,
             }, 
