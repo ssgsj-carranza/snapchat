@@ -11,7 +11,7 @@ function Login() {
         auth.signInWithPopup(provider).then((result) => {
             dispatch(login({
                 username: result.user.displayName,
-                profilePic: result.user.photoUrl,
+                profilePic: result.user.photoURL,
                 id: result.user.uid,
             }));
         })
