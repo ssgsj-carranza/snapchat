@@ -1,10 +1,21 @@
 import { Button } from '@material-ui/core'
 import React from 'react'
 import './Login.css'
+import {useDispatch} from 'react-redux';
+import { auth, provider } from './firebase';
+import { login } from './features/appSlice';
 
 function Login() {
+    const dispatch = useDispatch();
     const singIn = () => {
-
+        auth.signInWithPopup(provider).then((result) => {
+            dispatch(login({
+                username: result.user.displayName,
+                profilePic: result.user.photoUrl,
+                id: result.user.uid,
+            }));
+        })
+        .catch((error) => alert(error.message));
     };
 
     return (
